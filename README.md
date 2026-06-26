@@ -1,38 +1,23 @@
-# TechNova RAG-Based Q&A System
+# TechNova AI Text Summarizer
 
 ## Overview
 
-TechNova RAG-Based Q&A System is a Generative AI application that uses Retrieval-Augmented Generation (RAG) to answer user questions based on uploaded documents. The system retrieves relevant document sections using vector embeddings and generates answers using a language model.
+TechNova AI Text Summarizer is a Generative AI project developed using Hugging Face Transformers and Streamlit. The application accepts long-form text input and generates concise summaries using a pre-trained summarization model.
 
 ## Features
 
-* Upload PDF or TXT documents.
-* Automatically split documents into chunks.
-* Generate vector embeddings using Sentence Transformers.
-* Store embeddings using FAISS vector database.
-* Retrieve the most relevant document sections.
-* Generate answers using a language model.
-* Display retrieved context for transparency.
+* Accepts long-form text input.
+* Generates concise summaries using AI.
+* Displays original text length and summary length.
+* Calculates compression ratio and content reduction percentage.
+* User-friendly Streamlit interface.
 
 ## Technologies Used
 
 * Python
 * Streamlit
-* Sentence Transformers
-* FAISS
 * Hugging Face Transformers
 * PyTorch
-* PyPDF
-
-## Project Workflow
-
-1. Upload document.
-2. Extract text from document.
-3. Split text into chunks.
-4. Generate embeddings.
-5. Store embeddings in FAISS.
-6. Retrieve relevant chunks based on the user's question.
-7. Generate answer using retrieved context.
 
 ## Installation
 
@@ -41,16 +26,15 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Example Questions
+## Example Output
 
-* What is RAG?
-* What are vector embeddings?
-* What are the applications of RAG systems?
+Original Length: 279 words
+Summary Length: 54 words
+Compression Ratio: 19.35%
+Content Reduced By: 80.65%
 
 ## Future Improvements
 
-* Support multiple document uploads.
-* Add conversation history.
-* Support web-based knowledge sources.
-* Add ChromaDB support.
-* Integrate Gemini API or OpenAI API for higher quality responses.
+* Support PDF document summarization.
+* Multi-language summarization.
+* Export summaries to text files.
